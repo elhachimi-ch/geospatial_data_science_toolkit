@@ -13,7 +13,7 @@ def main():
                     ]
     collection_name = "COPERNICUS/S1_GRD"
     
-    vector_africa_roi = "D:\\chouaib\\data\data\\vectors\\africa_roi.parquet"
+    roi = [-8.389435, 32.784965, -7.975388, 33.015573]
     data_lake_folder = r"data\sentinel1_africa_2020"
     
     
@@ -24,7 +24,7 @@ def main():
         bands_list=variables_list,
         start_date="2020-01-01",
         end_date="2020-12-31",
-        roi=vector_africa_roi,
+        roi=roi,
         scale=10,
         output_folder=data_lake_folder,
     )
